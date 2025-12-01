@@ -45,7 +45,7 @@
 .siteVelocity__slider { display: flex; align-items: center; gap: 20px; white-space: nowrap; overflow: hidden; }
 .siteVelocity__slider .siteVelocity__sliderImage { width: clamp(160px, 40vw, 200px); }
 .text-item { font-size: clamp(38px, 13vw, 120px); line-height: normal; text-align: center; padding-right: 50px; text-transform: uppercase; font-family: "Nexa-Heavy", sans-serif; }
-.project_content--items { display: flex; justify-content: center; align-items: center; gap: clamp(40px, 4vw, 50px); flex-wrap: wrap; position: relative; }
+.project_content--items { display: grid; grid-template-columns: repeat(auto-fill, minmax(clamp(200px,26vw,500px), 1fr)); align-items: center; gap: clamp(40px, 4vw, 50px); flex-wrap: wrap; position: relative; }
 .project_content-item { flex: 1 1 40%; min-width: 200px; will-change: transform, opacity; position: relative; transition: transform 0.3s ease; display: flex; flex-direction: column; gap: 27px; }
 .project_img--mian { border-radius: clamp(20px, 3vw, 50px); width: 100%; overflow: hidden; display: flex; }
 .project_img { width: 100%; height: auto; transition: 0.7s all ease-in-out; }
@@ -70,7 +70,7 @@
 .site_title--container.site_title-column { flex-direction: column; gap: 30px; }
 .site_title--container.site_title-column :is(.site_section--title, .site_section--decs) { flex: none; }
 .site_title--container :is(.site_section--title, .site_section--decs) { flex: 100%; text-align: left; }
-.skills_icon--area { display: flex; flex-wrap: wrap; width: 100%; justify-content: space-between; row-gap: clamp(30px, 7vw, 150px); }
+.skills_icon--area { display: grid; grid-template-columns: repeat(auto-fill, minmax(clamp(100px,26vw,290px), 1fr)); width: 100%; row-gap: clamp(30px, 7vw, 150px); }
 .skills_icon--area .skills_icon { flex: 25%; justify-content: space-between; display: flex; align-items: center; flex-direction: column; row-gap: 20px; }
 .skills_icon--area .skills_icon .skill { max-width: clamp(60px, 11vw, 100px); width: 100%; }
 .skills__Label { font-size: clamp(14px, 0.8vw, 16px); letter-spacing: 2px; text-align: center; background-color: #444; padding: 5px 20px; border-radius: 500px; font-weight: 900; }

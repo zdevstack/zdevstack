@@ -373,23 +373,39 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger),
   gsap.to(".header", {
     scrollTrigger: {
-      trigger: ".site_top--area",
-      start: "40% 20%",
-      end: "bottom bottom",
-      scrub: !0,
+      trigger: "body", // or document.body
+      start: "top 0%", // when the top of the body hits the top of the viewport (page starts scrolling)
+      end: "bottom 50%", // doesn't really matter for scrub, but keeps it active
+      scrub: true,
+      endTrigger: "section:first-child",
+      markers: false,
+      // Add the "scrolled" class as soon as you scroll past the very top
       onEnter: () =>
         document.querySelector(".header").classList.add("scrolled"),
+
+      // Remove it when you scroll all the way back to the top
       onLeaveBack: () =>
         document.querySelector(".header").classList.remove("scrolled"),
+
+      // Optional: also handle the case when you refresh mid-page
+      onUpdate: (self) => {
+        const header = document.querySelector(".header");
+        if (self.progress > 0) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      },
     },
+
     backgroundColor: "#00000030",
     backdropFilter: "blur(30px)",
     width: () => (window.innerWidth <= 1024 ? "90%" : "60%"),
     y: "20px",
     borderRadius: "50px",
     ease: "none",
-  }),
-  headerActiveEffect(),
+  });
+headerActiveEffect(),
   (window.onload = function () {
     document.body.classList.add("loaded");
 
