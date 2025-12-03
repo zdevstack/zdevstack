@@ -48,9 +48,29 @@
       content="https://opengraph.b-cdn.net/production/images/46af9b40-2ef8-482c-86c4-12c0539ae451.png?token=nxPnUjbGbnXq1cC_sNZ2tEeVHMVt-DsDJbSK8nagAT4&height=675&width=1200&expires=33273745103"
     />
 
+    <!-- Performance Optimization: Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.clarity.ms" crossorigin>
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+
+    <!-- Preload critical fonts to avoid FOIT/FOUT -->
+    <link rel="preload" href="../assets/fonts/Nexa-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/Nexa-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="../css/fonts.css" as="style">
+    <link rel="preload" href="../css/style.css" as="style">
+
     <link rel="icon" href="../assets/images/fav-icon.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="../assets/images/fav-icon.png" />
-    <link rel="stylesheet" href="../css/app.css" />
+    
+    <!-- Load CSS files in parallel instead of using @import chain -->
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/resopnsive.css" />
+    
     <link rel="canonical" href="https://www.zdevstack.com" />
 
     <script type="application/ld+json">
@@ -484,11 +504,34 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
-    <script src="../js/lenis.js"></script>
-    <script src="../js/partical.js"></script>
-    <script src="../js/scrolltrigger.min.js"></script>
+    
+    <!-- Critical scripts for animations (load synchronously but in correct order) -->
     <script src="../js/gsap.min.js"></script>
+    <script src="../js/scrolltrigger.min.js"></script>
+    <script src="../js/lenis.js"></script>
     <script src="../js/app.js"></script>
+    
+    <!-- Non-critical scripts (deferred) -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script defer src="../js/partical.js"></script>
+    
+    <script>
+      // Set copyright year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Register Service Worker for caching
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          // Path is ../sw.js because we are in /pages/
+          navigator.serviceWorker.register('../sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
