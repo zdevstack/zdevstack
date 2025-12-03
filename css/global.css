@@ -32,7 +32,7 @@ p { font-size: clamp(14px, 2vw, 20px); }
 [class*="--outline"]:not([class*="--outline_"]) { border-radius: 50px; border: 1px solid #fff; }
 [class*="--outline__000"]:not([class*="--outline_fff"]) { border-radius: 50px; border: 1px solid #000; }
 .site_content-container { max-width: 1500px; margin: 0 auto; width: 100%; padding: 0 clamp(30px, 4vw, 50px); display: flex; gap: clamp(70px, 10vw, 150px); flex-direction: column; }
-.has__heighlight--clr { background: radial-gradient(circle at 0% 0%, aqua 20% ,blue 100% , #ffffff 0%); background-clip: text; color: transparent; -webkit-text-fill-color: transparent; -webkit-background-clip: text; }
+.has__heighlight--clr { background: linear-gradient(180deg, #3D37F5 0%, #37F5BF 100%); background-clip: text; color: transparent; -webkit-text-fill-color: transparent; -webkit-background-clip: text; }
 section :first-child { scroll-margin-top: 40px; }
 section:not(:first-child) { scroll-margin-top: 115px; }
 .site_bg--clr_fff { background:#fff; }

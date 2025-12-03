@@ -12,7 +12,7 @@ const ASSETS_TO_CACHE = [
   '/js/scrolltrigger.min.js',
   '/js/lenis.js',
   '/js/partical.js',
-  '/assets/images/logo-gradient.svg',
+  '/assets/images/logo-icon-gradient.svg',
   '/assets/images/fav-icon.png'
 ];
 
