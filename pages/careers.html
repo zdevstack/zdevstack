@@ -59,8 +59,20 @@
     <link rel="preload" href="../css/fonts.css" as="style" />
     <link rel="preload" href="../css/style.css" as="style" />
 
-    <link rel="icon" href="../assets/images/fav-icon.png" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="../assets/images/fav-icon.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="../assets/images/fav-icon.png"
+      type="image/png"
+      sizes="192x192"
+    />
     <link rel="apple-touch-icon" href="../assets/images/fav-icon.png" />
+    <link rel="manifest" href="../manifest.json" />
 
     <!-- Load CSS files in parallel instead of using @import chain -->
     <link rel="stylesheet" href="../css/fonts.css" />
@@ -73,10 +85,101 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Careers | Zdev Stack",
-        "description": "Careers opportunities at Zdev Stack.",
-        "url": "https://www.zdevstack.com/careers"
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "name": "Careers | Zdev Stack",
+            "description": "Careers opportunities at Zdev Stack.",
+            "url": "https://www.zdevstack.com/careers"
+          },
+          {
+            "@type": "JobPosting",
+            "title": "Frontend Developer",
+            "description": "We are looking for a talented Frontend Developer to join our remote team. Experience with React, modern CSS, and performance optimization is required.",
+            "datePosted": "2025-12-01",
+            "validThrough": "2026-03-01",
+            "employmentType": "FULL_TIME",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "Zdev Stack",
+              "sameAs": "https://www.zdevstack.com",
+              "logo": "https://www.zdevstack.com/assets/images/logo-icon-gradient.svg"
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Remote",
+                "addressLocality": "Ahmedabad",
+                "addressRegion": "Gujarat",
+                "postalCode": "380001",
+                "addressCountry": "IN"
+              }
+            },
+            "baseSalary": {
+              "@type": "MonetaryAmount",
+              "currency": "USD",
+              "value": {
+                "@type": "QuantitativeValue",
+                "valie": 50000,
+                "unitText": "YEAR"
+              }
+            },
+            "jobLocationType": "TELECOMMUTE"
+          },
+          {
+            "@type": "JobPosting",
+            "title": "Creative Designer",
+            "description": "We need a Creative Designer for contract work. Must have a strong portfolio in web and graphic design.",
+            "datePosted": "2025-12-01",
+            "validThrough": "2026-03-01",
+            "employmentType": "CONTRACTOR",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "Zdev Stack",
+              "sameAs": "https://www.zdevstack.com",
+              "logo": "https://www.zdevstack.com/assets/images/logo-icon-gradient.svg"
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Remote",
+                "addressLocality": "Ahmedabad",
+                "addressRegion": "Gujarat",
+                "postalCode": "380001",
+                "addressCountry": "IN"
+              }
+            },
+            "jobLocationType": "TELECOMMUTE"
+          },
+          {
+            "@type": "JobPosting",
+            "title": "Backend Developer (PHP, LARAVEL)",
+            "description": "Experienced Backend Developer needed for PHP and Laravel projects.",
+            "datePosted": "2025-12-01",
+            "validThrough": "2026-03-01",
+            "employmentType": "CONTRACTOR",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "Zdev Stack",
+              "sameAs": "https://www.zdevstack.com",
+              "logo": "https://www.zdevstack.com/assets/images/logo-icon-gradient.svg"
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Remote",
+                "addressLocality": "Ahmedabad",
+                "addressRegion": "Gujarat",
+                "postalCode": "380001",
+                "addressCountry": "IN"
+              }
+            },
+            "jobLocationType": "TELECOMMUTE"
+          }
+        ]
       }
     </script>
     <script type="text/javascript">
