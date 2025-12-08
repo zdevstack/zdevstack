@@ -163,7 +163,9 @@
                 >
               </li>
               <li>
-                <a href="#projects" class="header_nav_links has_active--effect"
+                <a
+                  href="./pages/allproject"
+                  class="header_nav_links has_active--effect"
                   >Projects</a
                 >
               </li>
@@ -792,15 +794,7 @@
     <script defer src="./js/partical.js"></script>
 
     <script>
-      // Set copyright year
       document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Register Service Worker for caching
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/sw.js");
-        });
-      }
     </script>
   </body>
 </html>

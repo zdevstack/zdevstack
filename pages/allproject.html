@@ -594,16 +594,7 @@
     <script defer src="../js/partical.js"></script>
 
     <script>
-      // Set copyright year
       document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Register Service Worker for caching
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          // Path is ../sw.js because we are in /pages/
-          navigator.serviceWorker.register("../sw.js");
-        });
-      }
     </script>
   </body>
 </html>
