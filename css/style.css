@@ -87,7 +87,7 @@
   width: fit-content;
 }
 .site_footer-left img { max-width: clamp(150px, 15vw, 240px); width: 100%; }
-.site_footer-nav { width: 100%; display: flex; flex-direction: column; gap: 20px; }
+.site_footer-nav { /* width: 100%; */ display: flex; flex-direction: column; gap: 20px; }
 .site_footer-nav a { color: #fff; font-size: clamp(14px, 1.8vw, 18px); }
 .site_footer-nav--links.contact-section { display: flex; justify-content: space-between; align-items: center; max-width: 80%; width: 100%; }
 .site_footer-right { display: flex; justify-content: space-between; align-items: stretch; }

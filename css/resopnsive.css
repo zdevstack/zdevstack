@@ -16,7 +16,7 @@
 .site_footer-left { position: absolute; left: 0; z-index: -1; opacity: .5; height: 114%; top: 50%; transform: translate(-38%, -50%); ; }
 .site_footer-left img { max-width:100%; width:100%; height: 100%; }
 .site_footer-container { position: relative; }
-.site_footer-container .site_navigation--item { flex: 100%; width: 100%; }
+.site_footer-container .site_navigation--item { flex: 100%; width: 100%; flex-wrap: wrap; gap:30px;  }
 .contact--page_inner .contact--page__right { display:none; }
 .site_form--container { column-gap: 100px; row-gap: 40px; }
 .selection_btn { padding:13px 11px; }
