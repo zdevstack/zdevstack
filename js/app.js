@@ -72,6 +72,44 @@ function debounce(func, delay) {
 }
 
 /**
+ * Clear all browser cache and storage
+ */
+async function clearBrowserCache() {
+  try {
+    // Clear Local Storage
+    localStorage.clear();
+
+    // Clear Session Storage
+    sessionStorage.clear();
+
+    // Clear Cookies
+    const cookies = document.cookie.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i];
+      const eqPos = cookie.indexOf("=");
+      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+    }
+
+    // Clear Cache Storage (Cache API)
+    if ("caches" in window) {
+      const cacheNames = await caches.keys();
+      await Promise.all(cacheNames.map((name) => caches.delete(name)));
+    }
+
+    // Unregister Service Workers
+    if ("serviceWorker" in navigator) {
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(registrations.map((reg) => reg.unregister()));
+    }
+
+    console.log("Browser cache and storage cleared successfully.");
+  } catch (error) {
+    console.warn("Failed to clear browser cache:", error);
+  }
+}
+
+/**
  * Check if device is mobile
  */
 function isMobile() {
@@ -723,6 +761,9 @@ function initSkillIconColors() {
  * Initialize all features on DOMContentLoaded
  */
 document.addEventListener("DOMContentLoaded", () => {
+  // Clear browser cache and storage
+  clearBrowserCache();
+
   // Smooth scrolling
   initSmoothScrolling();
 
