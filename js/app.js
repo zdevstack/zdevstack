@@ -754,6 +754,42 @@ function initSkillIconColors() {
 }
 
 // ================================================================
+// FAQ ACCORDION
+// ================================================================
+
+/**
+ * Initialize FAQ accordion behavior
+ */
+function initFAQ() {
+  const faqItems = document.querySelectorAll(".faq_item");
+
+  if (faqItems.length === 0) return;
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq_question");
+    question.addEventListener("click", () => {
+      // Close other items
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item && otherItem.classList.contains("active")) {
+          otherItem.classList.remove("active");
+          const otherAnswer = otherItem.querySelector(".faq_answer");
+          otherAnswer.style.maxHeight = null;
+        }
+      });
+
+      // Toggle current item
+      item.classList.toggle("active");
+      const answer = item.querySelector(".faq_answer");
+      if (item.classList.contains("active")) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+        answer.style.maxHeight = null;
+      }
+    });
+  });
+}
+
+// ================================================================
 // INITIALIZATION
 // ================================================================
 
@@ -782,6 +818,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Form
   initFormValidation();
+
+  // FAQ
+  initFAQ();
 
   // Color thief
   initSkillIconColors();
