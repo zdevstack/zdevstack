@@ -15,18 +15,18 @@
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Zdev Stack" />
 
-    <meta property="og:url" content="https://zdevstack.com/careers" />
+    <meta property="og:url" content="https://www.zdevstack.com/pages/careers" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Zdev Stack | Careers" />
     <meta
       property="og:description"
-      content="Join the Zdev Stack team. We are looking for talented developers and designers."
+      content="Explore career opportunities at Zdev Stack. We'll post open roles here as they become available."
     />
-    <meta property="og:image" content="./assets/images/link-poster.png" />
+    <meta property="og:image" content="../assets/images/link-poster.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="zdevstack.com" />
-    <meta property="twitter:url" content="https://zdevstack.com/careers" />
+    <meta property="twitter:url" content="https://www.zdevstack.com/pages/careers" />
     <meta name="twitter:title" content="Zdev Stack | Careers" />
     <meta
       name="twitter:description"
@@ -39,22 +39,9 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <link rel="preconnect" href="https://www.clarity.ms" crossorigin />
     <link rel="dns-prefetch" href="https://www.clarity.ms" />
-
-    <!-- Preload critical fonts to avoid FOIT/FOUT -->
-    <link
-      rel="preload"
-      href="../assets/fonts/Nexa-Heavy.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="../assets/fonts/Nexa-ExtraLight.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@700;800;900&family=Sora:wght@200;300;400&display=swap" rel="stylesheet" />
 
     <!-- Preload critical CSS -->
     <link rel="preload" href="../css/fonts.css" as="style" />
@@ -321,115 +308,24 @@
         class="careers_section site_content-container"
         style="margin-top: 50px; margin-bottom: 100px"
       >
-        <div class="careers_list">
-          <!-- Job 1 -->
-          <div
-            class="career_item"
-            style="
-              border-top: 1px solid rgba(255, 255, 255, 0.2);
-              padding: 40px 0;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              flex-wrap: wrap;
-              gap: 20px;
-            "
-          >
-            <div class="job_details">
-              <h3 style="margin-bottom: 10px">Frontend Developer</h3>
-              <p style="opacity: 0.7">Remote | Full-time</p>
-            </div>
-            <!-- Action button (could link to a form or email) -->
-            <div class="job_action">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScmpWrtd6SNamxk71QGT3yN7_GWB6pS6We5bzZOF5Kd40mRQw/viewform?usp=header"
-                target="_blank"
-                class="site_btn"
-                >Apply Now</a
-              >
-            </div>
+        <div class="careers_empty--state" role="status" aria-live="polite">
+          <div class="careers_empty--icon" aria-hidden="true">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="64" height="64" rx="16" fill="rgba(255,255,255,0.06)"/>
+              <path d="M20 22h24M20 32h16M20 42h10" stroke="rgba(255,255,255,0.3)" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="46" cy="42" r="8" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+              <path d="M42 42h8M46 38v8" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
           </div>
-          <!-- Job 2 -->
-          <div
-            class="career_item"
-            style="
-              border-top: 1px solid rgba(255, 255, 255, 0.2);
-              border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-              padding: 40px 0;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              flex-wrap: wrap;
-              gap: 20px;
-            "
-          >
-            <div class="job_details">
-              <h3 style="margin-bottom: 10px">Creative Designer</h3>
-              <p style="opacity: 0.7">Remote | Contract</p>
-            </div>
-            <div class="job_action">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScmpWrtd6SNamxk71QGT3yN7_GWB6pS6We5bzZOF5Kd40mRQw/viewform?usp=header"
-                target="_blank"
-                class="site_btn"
-                >Apply Now</a
-              >
-            </div>
-          </div>
-          <div
-            class="career_item"
-            style="
-              border-top: 1px solid rgba(255, 255, 255, 0.2);
-              border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-              padding: 40px 0;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              flex-wrap: wrap;
-              gap: 20px;
-            "
-          >
-            <div class="job_details">
-              <h3 style="margin-bottom: 10px">Creative UI/UX Designer</h3>
-              <p style="opacity: 0.7">Remote | Contract</p>
-            </div>
-            <div class="job_action">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScmpWrtd6SNamxk71QGT3yN7_GWB6pS6We5bzZOF5Kd40mRQw/viewform?usp=header"
-                target="_blank"
-                class="site_btn"
-                >Apply Now</a
-              >
-            </div>
-          </div>
-          <div
-            class="career_item"
-            style="
-              border-top: 1px solid rgba(255, 255, 255, 0.2);
-              border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-              padding: 40px 0;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              flex-wrap: wrap;
-              gap: 20px;
-            "
-          >
-            <div class="job_details">
-              <h3 style="margin-bottom: 10px">
-                Backend Developer (PHP, LARAVEL)
-              </h3>
-              <p style="opacity: 0.7">Remote | Contract</p>
-            </div>
-            <div class="job_action">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScmpWrtd6SNamxk71QGT3yN7_GWB6pS6We5bzZOF5Kd40mRQw/viewform?usp=header"
-                target="_blank"
-                class="site_btn"
-                >Apply Now</a
-              >
-            </div>
-          </div>
+          <h3 class="careers_empty--title">No Openings Right Now</h3>
+          <p class="careers_empty--desc">
+            We don't have any open positions at the moment, but we're always
+            growing. Check back soon — or send us your portfolio anyway.
+          </p>
+          <a
+            href="mailto:teams.zdevstack@gmail.com?subject=General%20Application"
+            class="site_btn careers_empty--cta"
+          >Send Your Portfolio</a>
         </div>
       </section>
 

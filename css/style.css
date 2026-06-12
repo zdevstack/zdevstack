@@ -50,7 +50,7 @@
 .siteVelocity__slider--Container { width: 100%; height: 100%; overflow: hidden; flex-direction: column; display: flex; justify-content: center; align-items: center; row-gap: clamp(20px, 5vw, 50px); overflow: hidden; }
 .siteVelocity__slider { display: flex; align-items: center; gap: 20px; white-space: nowrap; overflow: hidden; }
 .siteVelocity__slider .siteVelocity__sliderImage { width: clamp(160px, 40vw, 200px); }
-.text-item { font-size: clamp(38px, 13vw, 120px); line-height: normal; text-align: center; padding-right: 50px; text-transform: uppercase; font-family: "Nexa-Heavy", sans-serif; }
+.text-item { font-size: clamp(38px, 13vw, 120px); line-height: normal; text-align: center; padding-right: 50px; text-transform: uppercase; font-family: 'Albert Sans', sans-serif; font-weight: 900; }
 .project_content--items { display: grid; grid-template-columns: repeat(auto-fill, minmax(clamp(200px,26vw,500px), 1fr)); align-items: center; gap: clamp(40px, 4vw, 50px); flex-wrap: wrap; position: relative; }
 .project_content-item { flex: 1 1 40%; min-width: 200px; will-change: transform, opacity; position: relative; transition: transform 0.3s ease; display: flex; flex-direction: column; gap: 27px; }
 .project_img--mian { border-radius: clamp(20px, 3vw, 50px); width: 100%; overflow: hidden; display: flex; }
@@ -79,6 +79,13 @@
 .skills_icon--area { display: grid; grid-template-columns: repeat(auto-fill, minmax(clamp(100px,26vw,290px), 1fr)); width: 100%; row-gap: clamp(30px, 7vw, 150px); }
 .skills_icon--area .skills_icon { flex: 25%; justify-content: space-between; display: flex; align-items: center; flex-direction: column; row-gap: 20px; }
 .skills_icon--area .skills_icon .skill { max-width: clamp(60px, 11vw, 100px); width: 100%; }
+.skills_category { display: flex; flex-direction: column; gap: clamp(30px, 4vw, 50px); }
+.skills_category--label { font-family: 'Albert Sans', sans-serif; font-weight: 700; font-size: clamp(11px, 0.9vw, 14px); text-transform: uppercase; letter-spacing: 0.2em; opacity: 0.4; padding: 6px 18px; border: 1px solid rgba(255,255,255,0.25); border-radius: 500px; width: fit-content; }
+.careers_empty--state { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 24px; padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); border: 1px solid rgba(255,255,255,0.1); border-radius: clamp(20px, 3vw, 40px); background: rgba(255,255,255,0.03); max-width: 600px; margin: 0 auto; width: 100%; }
+.careers_empty--icon { display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 20px; background: rgba(255,255,255,0.05); }
+.careers_empty--title { font-family: 'Albert Sans', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 30px); }
+.careers_empty--desc { font-size: clamp(14px, 1.6vw, 18px); opacity: 0.55; line-height: 1.7; max-width: 440px; }
+.careers_empty--cta { margin-top: 8px; display: inline-block; }
 .skills__Label { font-size: clamp(12px, 0.8vw, 16px); min-width: max-content; text-align: center; background-color: #444; padding: 5px 20px; border-radius: 500px; font-weight: 900; }
 .site_footer-container { max-width: 1500px; margin: 0 auto; width: 100%; padding: clamp(25px, 3.3vw, 50px) clamp(25px, 4vw, 50px) 0px; display: flex; flex-wrap: wrap; row-gap: clamp(30px, 4.8vw, 70px); }
 .site_footer-container .site_navigation--item { flex: 50%; }
@@ -272,7 +279,8 @@ aspect-ratio: 1/1;
   align-items: center;
   cursor: pointer;
   padding: 10px 0;
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: 'Albert Sans', sans-serif;
+  font-weight: 700;
   font-size: clamp(18px, 2vw, 24px);
   transition: color 0.3s ease;
 }
